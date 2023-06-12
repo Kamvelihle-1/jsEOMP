@@ -2,7 +2,7 @@
 
 
 main{
-    min-height: 1920px;
+    max-height: 1920px;
 }
 .landing{
     width: inherit;
@@ -12,6 +12,7 @@ section{
     background-color: aliceblue;
     color: black;
     margin: 2rem;
+    min-width: fit-content;
     height: fit-content;
     padding: 2rem;
 }
@@ -39,7 +40,14 @@ section{
  tr th, tr td{
     border: 1px solid black;
     padding: 1rem;
+    width: inherit;
     
+}
+table{
+    width: inherit;
+}
+tr img{
+    width: 10rem;
 }
 .filter{
     background-color: aliceblue; 
