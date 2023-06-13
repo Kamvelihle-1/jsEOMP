@@ -16,6 +16,10 @@ section{
     height: fit-content;
     padding: 2rem;
 }
+img[alt='logo']{
+    max-width: 3rem;
+    clip-path: circle();
+}
 .c-item{
     height: 650px;
     
@@ -52,3 +56,20 @@ tr img{
 .filter{
     background-color: aliceblue; 
 }
+#btn-wishlist{
+    padding: 5px;
+}
+
+#btn-wishlist:hover::after {
+    content: "Add to wish-list"; /* Add your description here */
+    position: absolute;
+    top: 70%; /* Position the tooltip below the button */
+    left: 75%; /* Center the tooltip horizontally */
+    transform: translateX(-50%); /* Adjust the tooltip's horizontal position */
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0.8;
+    white-space: nowrap; 
+  }

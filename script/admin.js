@@ -1,3 +1,4 @@
+let close =document.querySelector('.btn-close')
 let addListing =document.querySelector('#add-btn')
 let listingType=document.querySelector('#listing-type')
 let listingLocation=document.querySelector('#listing-location')
@@ -12,6 +13,7 @@ let tempId=6;
 let editBtn;
 let deleteBtn;
 let check=true;
+let editPosition;
 
 let listings=[
     {
@@ -19,7 +21,7 @@ let listings=[
         type:"House",
         image:"https://i.postimg.cc/bNJm7Xpf/th-1631564054.jpg",
         price:'35 000 000',
-        location:"Cairo, Egypt",
+        location:"Cairo,Egypt",
         rooms:8
     },
     {
@@ -27,7 +29,7 @@ let listings=[
         type:"House",
         image:"https://i.postimg.cc/Y2JxsvnY/th-2114995106.jpg",
         price:'23 500 000',
-        location:"Cape Town, South Africa",
+        location:"Cape Town,South Africa",
         rooms:6
     },
     {
@@ -35,7 +37,7 @@ let listings=[
         type:"House",
         image:"https://i.postimg.cc/1tF8n3G1/th-3756547690.jpg",
         price:'45 000 000',
-        location:"Marrakech, Moretious",
+        location:"Marrakech,Moretious",
         rooms:12
     },
     {
@@ -43,7 +45,7 @@ let listings=[
         type:"House",
         image:"https://i.postimg.cc/qvQbSkCr/th-4118733502.jpg",
         price:'60 000 000',
-        location:"Cape Town, South Africa",
+        location:"Cape Town,South Africa",
         rooms:7
     },
     {
@@ -51,29 +53,30 @@ let listings=[
         type:"House",
         image:"https://i.postimg.cc/bNJm7Xpf/th-1631564054.jpg",
         price:'35 000 000',
-        location:"Sandton, South Africa",
+        location:"Sandton,South Africa",
         rooms:8
     }
 ]
 displayList()
+
 // Adding listings
 
 function addHouse() {
-    try {
+    addListing.addEventListener('click',()=>{
         if (isValid()) {
-            addListing.addEventListener('click',()=>{
-                event.preventDefault();
-                listings.push(new Addlisting(tempId,listingType.value,listingImage.value,listingPrice.value,listingLocation.value,roomNum.value))
-                tempId++
-                localStorage.setItem('property-list',JSON.stringify(listings))
-                table.innerHTML="";
-                clear();
-                displayList();
-            }) 
+            event.preventDefault();
+            listings.push(new Addlisting(tempId,listingType.value,listingImage.value,listingPrice.value,listingLocation.value,roomNum.value))
+            tempId++
+            localStorage.setItem('property-list',JSON.stringify(listings))
+            table.innerHTML="";
+            clear();
+            defaultTable()
+            displayList();
+            close.click()
         }
-    } catch (error) {
-        alert('An error occured',error)
-    }
+    }) 
+    
+   
   
 }
 function Addlisting(key,tp,img,pr,loc,rm) {
@@ -130,12 +133,14 @@ function editer() {
     editBtn=[...document.querySelectorAll('#edit-btn')]
     editBtn.forEach((edit)=>{
         edit.addEventListener('click',()=>{
-            let editPosition =editBtn.indexOf(event.target)
+             editPosition =editBtn.indexOf(event.target)
+            listingType.value=listings[editPosition].type
             listingImage.value=listings[editPosition].image
             listingLocation.value=listings[editPosition].location
             listingPrice.value=listings[editPosition].price
             roomNum.value=listings[editPosition].rooms
-            btnEditer();
+            btnEditer(editPosition);
+            
         })
        
        
@@ -147,11 +152,12 @@ function btnEditer() {
     try {
         btnEdit.addEventListener('click',()=>{
             if (isValid()) {
-                listings[editPosition].push(new Addlisting(editPosition+1,listingType.value,listingImage.value,listingPrice.value,listingLocation.value,roomNum.value))
+                listings[editPosition]=new Addlisting(editPosition+1,listingType.value,listingImage.value,listingPrice.value,listingLocation.value,roomNum.value)
                 localStorage.setItem('property-list',JSON.stringify(listings))
                 defaultTable();
                 clear();
                 displayList();
+                close.click()
             } 
         })
         
@@ -181,8 +187,8 @@ function displayList() {
         
         `
     }) 
-    addHouse();
     btnDelete();
+    addHouse();
     editer();
 }
 
