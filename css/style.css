@@ -2,13 +2,34 @@
 
 body{
     max-height: 1920px;
+    width: inherit;
 }
-main{
+/* main{
     max-height: 1920px;
+} */
+
+/* Navbar */
+.navbar .container-fluid{
+    background-color: rgb(160, 161, 162) ;
 }
+.navbar-nav{
+    margin-left: 20rem;
+}
+
+.navbar-nav .nav-link:hover{
+    /* margin-top: 1rem; */
+    background-color: #1f1e1e;
+    color: white;
+    border-radius: .5rem;
+    transform: translateY(-0.5rem);
+    transition: top 0.9s;
+
+}
+/* landing */
 .landing{
     width: inherit;
 }
+/* Sections */
 section{
     border-radius: .5rem;
     background-color: aliceblue;
@@ -18,22 +39,22 @@ section{
     height: fit-content;
     padding: 2rem;
 }
+/* Logo */
 img[alt='logo']{
     max-width: 3rem;
     clip-path: circle();
 }
+/* Carousel */
 .c-item{
     height: 650px;
     
 }
 .c-img{
     height: 100%;
-    object-fit: cover;
-}
-.navigation li a{
-    color: white;
+    object-fit:cover;
 }
 
+/* Footer */
 .footer{
     background-color: rgb(178, 181, 183);
     color: black;
@@ -42,7 +63,7 @@ img[alt='logo']{
 .icons{
     background-color: rgb(160, 161, 162);
 }
-
+/* Admin */
  tr th, tr td{
     border: 1px solid black;
     padding: 1rem;
@@ -55,6 +76,7 @@ table{
 tr img{
     width: 10rem;
 }
+/* Products */
 .filter{
     background-color: aliceblue; 
 }
@@ -63,11 +85,11 @@ tr img{
 }
 
 #btn-wishlist:hover::after {
-    content: "Add to wish-list"; /* Add your description here */
+    content: "Add to wish-list"; 
     position: absolute;
-    top: 70%; /* Position the tooltip below the button */
-    left: 75%; /* Center the tooltip horizontally */
-    transform: translateX(-50%); /* Adjust the tooltip's horizontal position */
+    top: 70%; 
+    left: 75%; 
+    transform: translateX(-50%);
     background-color: black;
     color: white;
     padding: 5px 10px;
@@ -78,11 +100,8 @@ tr img{
 
   /* Contact */
 #contact-modal{
-    /* background-image:linear-gradient(45deg, #838680,#e6e6e6) ; */
     padding: 0 2rem;
-    margin: 3rem 1rem;
-    
-    
+    margin: 3rem 1rem;  
 }
 form input, form textarea{
     width: 90%;
@@ -99,4 +118,10 @@ form button{
     padding: 14px 60px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+@media screen and (width<1000px) {
+    .navbar-nav{
+        margin-left: 0;
+    }
 }
