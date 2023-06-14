@@ -4,9 +4,9 @@ body{
     min-height: 1920px; 
     width: 1080px;
 }
-/* main{
+main{
     max-height: 1920px;
-} */
+}
 
 /* Navbar */
 .navbar .container-fluid{
