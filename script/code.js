@@ -16,19 +16,14 @@ let isType,isRooms,isLocation,minPrice,maxPrice
 displayProp(productsList);
 // Property filter
 filterBtn.addEventListener('click',()=>{
+
     page.innerHTML=""
     productsList.forEach((listing)=>{
         filterValues()
-        console.log(listing.price>minPrice);
-        console.log(listing.price<maxPrice);
-        console.log(listing.type==isType);
-        // console.log(isType,isRooms,isLocation,minPrice,maxPrice);
-    //    console.log(parseInt(listing.price)>minPrice);
-    //   console.log(parseInt(listing.price)<maxPrice);
-       //console.log(listing.rooms==parseInt(isRooms));
+
         if ((listing.type==isType)&&(listing.price>minPrice) && (listing.price<maxPrice)) {
             newList.push(listing)
-            console.log(newList);
+            
         }
       //console.log((listing.type==isType)&&(listing.rooms==parseInt(isRooms))&&(listing.location==isLocation)&&(listing.price>minPrice) && (listing.price<maxPrice));
     //  console.log(isType,isLocation,isRooms,maxPrice,minPrice);
@@ -36,8 +31,18 @@ filterBtn.addEventListener('click',()=>{
     //  console.log(parseInt(listing.price)<maxPrice);
     //  console.log(listing.rooms==parseInt(isRooms));
     })
-    displayProp(newList)
+    if (newList.length>0) {
+        displayProp(newList)
+        newList=[]
+    } else {
+        page.innerHTML+=
+        `
+        <p class="display-2">No properties available </p>
+        `
+    }
+    
 })
+
 
 function filterValues() {
    // switch (true) {
@@ -127,7 +132,7 @@ function displayProp(arrData) {
         page.innerHTML+=
         `
         <div class="card" style="width: 18rem;">
-            <img src="${prop.image}" class="card-img-top" alt="property-image">
+            <img src="${prop.image}" class="card-img-top" alt="property-image" style="height:190px;">
             <div class="card-body">
                 <h5 class="card-title">${prop.location}</h5>
                 <p class="card-text">A beutiful ${prop.rooms} room ${prop.type}</p>
