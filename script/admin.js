@@ -57,6 +57,7 @@ let listings=[
         rooms:8
     }
 ]
+localStorage.setItem('property-list',JSON.stringify(listings))
 displayList()
 
 // Adding listings
