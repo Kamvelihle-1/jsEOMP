@@ -6,6 +6,7 @@ body{
 }
 main{
     max-height: 1920px;
+    margin-bottom:2rem;
 }
 
 /* Navbar */
