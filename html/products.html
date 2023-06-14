@@ -38,14 +38,14 @@
                     <h2 class="display-2">Our Listings</h2>
                 </div>
             </div>
-            <div class="row filter">
+            <div class="row filter ">
                 <div class="col">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-5 col-12">
                             <div class="row m-2">
                                 <label for="filter-type">Home type</label>
                             </div>
-                            <div class="row m-2">
+                            <div class="row m-2 ">
                                 <select name="filter-type" id="filter-type">
                                     <option value="" disabled selected></option>
                                     <option value="House">House</option>
@@ -55,51 +55,8 @@
                             </div>
                             
                         </div>
-                        <div class="col">
-                            <div class="row m-2">
-                                <label for="filter-bedrooms">Bedrooms</label>
-                            </div>
-                            <div class="row m-2">
-                                <select name="filter-bedrooms" id="filter-bedrooms">
-                                    <option value="" disabled selected></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                            </div>
-                            
-                        </div>
-                        <div class="col">
-                            <div class="row m-2">
-                                <label for="filter-location">Location</label>
-                            </div>
-                            <div class="row m-2">
-                                <select name="filter-location" id="filter-location">
-                                    <option value="" disabled selected></option>
-                                    <option value="Cape Town, South Aftrica">Cape Town</option>
-                                    <option value="Lagos, Nigeria">Lagos</option>
-                                    <option value="Nairobi, Kenya">Nairobi</option>
-                                    <option value="Cairo, Egypt">Cairo</option>
-                                    <option value="Marrakech, Moretious">Marrakech</option>
-                                    <option value="Casablanca">Casablanca</option>
-                                    <option value="Accra">Accra</option>
-                                    <option value="Durban">Durban</option>
-                                    <option value="Franschhoek">Franschhoek</option>
-                                    <option value="Pretoria">Pretoria</option>
-                                </select>
-                            </div>
-                            
-                        </div>
-                        <div class="col">
+                        
+                        <div class="col-md-5 col-12">
                             <div class="row m-2">
                                 <label for="fliter-price">Price</label>
                             </div>
@@ -123,23 +80,50 @@
                     </div>
                     
                 </div>
-                <div class="col-1">
+                <div class="col-12 col-md-1 mt-4" >
                     <button id="filter-btn">Filter</button>
                 </div>
-                <div class="col-1">
-                    <button id="contact-btn">Contact Us</button>
+                <div class="col-12 col-md-1 mt-4">
+                    <button id="contact-btn" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact Us</button>
+
+                    <div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Contact Us</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="https://formspree.io/f/mnqyweaz" method="POST" id="contact-form">
+                                    <label for="Name">Name and Surname</label><br>
+                                    <input type="text" name="Name" placeholder="Your Name & Surname" required id="name">
+                                    <br><label for="email">Email</label><br>
+                                    <input type="email" name="Email" placeholder="Your Email" required id="mail" >
+                                    <br><label for="Message">Message</label><br>
+                                    <textarea name="Message"  rows="6" placeholder="Your Message" required id="text"></textarea>
+                                    
+                                
+                            </div>
+                            <div class="modal-footer">
+                              <button   type="reset" id="btnform-clear">Clear</button>
+                              <button type="submit"  id="submit">Send massage</button>
+                            </div>
+                        </form>
+                          </div>
+                        </div>
+                      </div>
                 </div>
 
             </div>
-            <div class="row ">
-                <div class="col properties d-flex gap-2 mt-3 flex-wrap">
+            <div class="row mb-2">
+                <div class="col properties d-md-flex gap-2 mt-3 flex-md-wrap">
 
                 </div>
             </div>
         </section>
     </main>
 
-<footer class="footer mb-0">
+<footer class="footer mb-0 mt-3">
     <div class="row contact text-sm-center">
         <div class="col text-sm-center  g-3">
           <h5 class="display-5"> Contact information</h5>
