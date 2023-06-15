@@ -2,7 +2,7 @@ let wishlitListings =document.querySelector('.wishlist-items')
 let wishlistOverview=document.querySelector('.checkout')
 let wishlists=JSON.parse(localStorage.getItem('wish-list'))?JSON.parse(localStorage.getItem('wish-list')):[];
 let values=0;
-let properties=wishlists.length;
+let properties=0;
 displayWishlist()
 wishlistSummary()
 function wishlistSummary() {
@@ -10,7 +10,7 @@ function wishlistSummary() {
         values+=parseInt(item.price.split('').filter((number)=>{
             return number!=' '
         }).join("")) * item.quantity
-     
+        properties+=item.quantity;
     })
     wishlistOverview.innerHTML+=
     `

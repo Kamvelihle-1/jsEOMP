@@ -1,15 +1,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 body{
-
     max-height: 1920px;
     
     /* width: inherit; */
 }
-main{
+/* main{
     padding: 2rem;
-}
-
+} */
 
 /* Navbar */
 .navbar .container-fluid{
@@ -39,7 +37,7 @@ section{
     color: black;
     /* margin: 2rem; */
     /* width: fit-content; */
-    max-width: fit-content;
+    
     height: fit-content;
     padding: 2rem;
 }
@@ -83,7 +81,7 @@ img[alt='logo']{
     max-width: 100%;
 }
 table{
-    max-width: 100%;
+    width: 90%;
 }
 tr img{
     width: 10rem;
@@ -137,7 +135,6 @@ form button{
         margin-left: 0;
     }
 }
-
 @media screen and (width<950px) {
     .admin{
         width: fit-content;
@@ -149,7 +146,18 @@ form button{
 @media screen and (width<920px) {
     .tbl-image{
         display:none ;
+       
     }
     
 }
 
+@media screen and (max-width:1000px) and (min-width:770px) {
+    .prod-card{
+        width: 288px;
+    }
+}
+@media screen and (width<770px) {
+    .prod-card{
+        width: 235px;
+    }
+}

@@ -85,6 +85,7 @@ function Addlisting(key,tp,img,pr,loc,rm) {
     this.type=tp;
     this.image=img;
     this.price=pr;
+    this.quantity=1;
     this.location=loc;
     this.rooms=rm;
 }

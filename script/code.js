@@ -227,7 +227,7 @@ function displayProp(arrData) {
     arrData.forEach((prop) => {
         page.innerHTML+=
         `
-        <div class="card" style="max-width: 18rem;">
+        <div class="card prod-card" style="max-width: 18rem;">
             <img src="${prop.image}" class="card-img-top" alt="property-image" style="height:190px;">
             <div class="card-body">
                 <h5 class="card-title">${prop.location}</h5>
