@@ -57,6 +57,7 @@ let listings=JSON.parse(localStorage.getItem('property-list'))?JSON.parse(localS
         rooms:8
     }
 ]
+localStorage.setItem('property-list',JSON.stringify(listings))
 displayList()
 
 // Adding listings
