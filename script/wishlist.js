@@ -32,6 +32,7 @@ function wishlistSummary() {
 
 // display wish-list properties
 function displayWishlist() {
+    wishlitListings.innerHTML=""
     wishlists.forEach((listProperty) => {
         wishlitListings.innerHTML+=
         `

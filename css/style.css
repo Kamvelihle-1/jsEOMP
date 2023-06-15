@@ -137,7 +137,9 @@ form button{
 }
 @media screen and (width<650px) {
     .admin{
-        width: 100%;
+
+        width:100%;
+
     }
     table{
         width: 300px;
