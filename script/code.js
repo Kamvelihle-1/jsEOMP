@@ -168,6 +168,7 @@ function addToWishlist() {
             let pos= wishlistButtons.indexOf(property)
             wishList.push(productsList[pos])
             localStorage.setItem('wish-list',JSON.stringify(wishList))
+
         }) 
     })   
 }

@@ -137,19 +137,15 @@ form button{
 }
 @media screen and (width<650px) {
     .admin{
+
         width:100%;
+
     }
     table{
         width: 300px;
     }
 }
-/* @media screen and (width<920px) {
-    .tbl-image{
-        display:none ;
-       
-    }
-    
-} */
+
 
 @media screen and (max-width:1000px) and (min-width:770px) {
     .prod-card{
