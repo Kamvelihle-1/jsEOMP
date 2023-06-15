@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>ADMIN PAGE</title>
 </head>
-<body class="text-center">
+<body class="text-center  ">
     <nav class="navbar navbar-expand-lg bg-body-tertiary pt-0 pb-0  sticky-top">
       <div class="container-fluid gap-2 p-2">
         <img src="https://i.postimg.cc/908gMXjK/K.png" alt="logo" >
@@ -32,15 +32,14 @@
    
     <main>
      
-        <section class="admin">
-           <div class="row">
+        <section class="container admin mx-0 p-0">
+           <div class="row mx-0">
                <div class="col">
                    <h2 class="display-2">Admin Page</h2>
                </div>
            </div>
-           <div class="row">
-               <div class="col">
-                <div class="row">
+           <div class="row mx-0">
+               
                     <div class="col ">
                         <button  id="sort-btn">Sort</button>
                     </div>
@@ -95,24 +94,28 @@
                   
                  
                    
-               </div>
+               
            </div>
-           <div class="row justify-content-center mt-3">
-               <div class="col text-center ">
-                   <table  id="tblAdmin">
-                       <tr>
-                           <th>Id</th>
-                           <th>Type</th>
-                           <th>Image</th>
-                           <th>Location</th>
-                           <th>Price</th>
-                           <th>Bedrooms</th>
-                           <th>Edit</th>
-                           <th>Delete</th>
-                       </tr>
-                   </table>
-               </div>
-           </div>
+         
+            <div class="row justify-content-center mt-3 mx-0">
+                <div class="col  text-center ">
+                 <div class="tbl-container">
+                    <table  id="tblAdmin">
+                        <tr>
+                            <th>Id</th>
+                            <th>Type</th>
+                            <th class="tbl-image">Image</th>
+                            <th>Location</th>
+                            <th>Price</th>
+                            <th>Bedrooms</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </table>
+                 </div>
+                </div>
+            </div>
+         
         </section> 
 
     </main>
@@ -122,7 +125,7 @@
 
 
 <footer class="footer mb-0">
-    <div class="row contact text-sm-center">
+    <div class="row contact text-center m-0">
         <div class="col text-sm-center  g-3">
           <h5 class="display-5"> Contact information</h5>
           <p class="fs-5"><i class="fa-solid fa-envelope"></i>  admin@futureproperties.co.za</p>
@@ -131,7 +134,7 @@
         </div>
         
     </div>
-    <div class="row pt-3 icons">
+    <div class="row pt-3 icons m-0">
         <div class="col-12 col-sm-6 fs-4">
           <p>Copyright &copy; 2023 by Future Properties</p>
         </div>
