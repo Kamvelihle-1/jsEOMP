@@ -165,7 +165,7 @@ function addToWishlist() {
     wishlistButtons=[...document.querySelectorAll('#btn-wishlist')]
     wishlistButtons.forEach((property)=>{
         property.addEventListener('click',()=>{
-            let pos=wishlistButtons.indexOf(property)
+            let pos= wishlistButtons.indexOf(property)
             wishList.push(productsList[pos])
             localStorage.setItem('wish-list',JSON.stringify(wishList))
         })
