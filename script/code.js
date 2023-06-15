@@ -169,7 +169,6 @@ function addToWishlist() {
             wishList.push(productsList[pos])
             localStorage.setItem('wish-list',JSON.stringify(wishList))
         })
-        
     })   
 }
 wishList=JSON.parse(localStorage.getItem('wish-list'))
