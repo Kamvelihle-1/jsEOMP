@@ -15,7 +15,7 @@ let deleteBtn;
 let check=true;
 let editPosition;
 
-let listings=[
+let listings=JSON.parse(localStorage.getItem('property-list'))?JSON.parse(localStorage.getItem('property-list')):[
     {
         id:1,
         type:"House",
@@ -177,7 +177,7 @@ function displayList() {
         <tr>
             <td> ${item.id}</td>
             <td>${item.type}</td>
-            <td><img src="${item.image}"</td>
+            <td class="tbl-image"><img src="${item.image}"</td>
             <td>${item.location}</td>
             <td>R ${item.price}</td>
             <td>${item.rooms}</td>

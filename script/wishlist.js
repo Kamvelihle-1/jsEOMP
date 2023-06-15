@@ -9,7 +9,7 @@ function wishlistSummary() {
     wishlists.forEach((item)=>{
         values+=parseInt(item.price.split('').filter((number)=>{
             return number!=' '
-        }).join(""))
+        }).join("")) * item.quantity
      
     })
     wishlistOverview.innerHTML+=
@@ -44,6 +44,7 @@ function displayWishlist() {
                     <div class="card-body">
                         <h5 class="card-title">${listProperty.location}</h5>
                         <p class="card-text">A beautiful ${listProperty.rooms} bedroom ${listProperty.type}</p>
+                        <p class="card-text">Quantity: ${listProperty.quantity}</p>
                         <p class="card-text"> R ${listProperty.price}</p>
                     </div>
                 </div>

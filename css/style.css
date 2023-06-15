@@ -2,11 +2,12 @@
 
 body{
     max-height: 1920px;
-    width: inherit;
+    
+    /* width: inherit; */
 }
-/* main{
-    max-height: 1920px;
-} */
+main{
+    padding: 2rem;
+}
 
 /* Navbar */
 .navbar .container-fluid{
@@ -34,8 +35,9 @@ section{
     border-radius: .5rem;
     background-color: aliceblue;
     color: black;
-    margin: 2rem;
-    min-width: fit-content;
+    /* margin: 2rem; */
+    /* width: fit-content; */
+    max-width: fit-content;
     height: fit-content;
     padding: 2rem;
 }
@@ -58,20 +60,28 @@ img[alt='logo']{
 .footer{
     background-color: rgb(178, 181, 183);
     color: black;
-    width: inherit;
+    /* width: inherit; */
 }
 .icons{
     background-color: rgb(160, 161, 162);
 }
 /* Admin */
+.admin{
+    max-width: inherit;
+}
  tr th, tr td{
     border: 1px solid black;
     padding: 1rem;
     width: inherit;
     
 }
+.tbl-container{
+    overflow-x: scroll;
+    padding: 2rem;
+    max-width: 100%;
+}
 table{
-    width: inherit;
+    max-width: 100%;
 }
 tr img{
     width: 10rem;
@@ -124,4 +134,18 @@ form button{
     .navbar-nav{
         margin-left: 0;
     }
+}
+@media screen and (width<950px) {
+    .admin{
+        width: fit-content;
+    }
+    table{
+        width: inherit;
+    }
+}
+@media screen and (width<920px) {
+    .tbl-image{
+        display:none ;
+    }
+    
 }
